@@ -1,0 +1,102 @@
+.page-footer {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 54px;
+    left: 0;
+    background-color: $grey;
+  }
+}
+
+.page-footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 65px;
+}
+
+.page-footer__confidentiality {
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba($dark, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.page-footer__signature {
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba($dark, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.page-footer__title {
+  text-transform: uppercase;
+  color: $dark;
+  font-family: $title-font;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.page-footer__link {
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  color: rgba($dark, 0.5);
+}
+
+.page-footer__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8px 15px 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: $tablet) {
+  .page-footer {
+    &::before {
+      bottom: 69px;
+    }
+  }
+
+  .page-footer__content {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+
+  .page-footer__info {
+    padding: 0 26px 0 27px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-footer {
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-footer__content {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .page-footer__info {
+    padding: 28px 15px 26px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-footer__confidentiality {
+    margin-bottom: 20px;
+  }
+}
