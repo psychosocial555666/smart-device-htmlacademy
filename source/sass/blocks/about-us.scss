@@ -1,0 +1,61 @@
+.about-us__content {
+  padding: 75px 20px 110px 180px;
+  color: $dark-grey;
+  background-image: url("../img/2005.webp");
+  background-repeat: no-repeat;
+  background-position: -29px 80px;
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.about-us__text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.about-us__more {
+  color: $accent;
+  border: 1px solid $accent;
+  width: 180px;
+}
+
+@media (max-width: $tablet) {
+  .about-us__content {
+    padding: 26px 20px 110px 210px;
+    background-size: 253px 359px;
+    background-position: -10px 26px;
+  }
+
+  .about-us__title {
+    margin-bottom: 26px;
+  }
+
+  .about-us__text {
+    padding-left: 3px;
+    margin-bottom: 39px;
+  }
+
+  .about-us__more {
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: $mobile){
+  .about-us__content {
+    padding: 1px 14px 50px;
+    background-image: none;
+  }
+
+  .about-us__title {
+    margin-bottom: 20px;
+  }
+
+  .about-us__text {
+    margin-bottom: 25px;
+  }
+}

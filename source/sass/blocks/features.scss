@@ -1,0 +1,130 @@
+.features__content {
+  padding-top: 111px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.features__item {
+  width: 48.7%;
+  box-sizing: border-box;
+  padding: 40px 42px 65px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border: 1px solid $light-lines;
+  border-left: 3px solid $accent;
+  color: $dark-grey;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  min-height: 299px;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: $white;
+    border-color: $accent;
+
+    .features__title {
+      color: $white;
+    }
+
+    .features__icon {
+      fill: $white;
+    }
+  }
+}
+
+.features__icon {
+  fill: $accent;
+  margin-bottom: 13px;
+}
+
+.features__title {
+  font-family: $title-font;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $accent;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.features__text {
+  margin: 0;
+}
+
+@media (max-width: $tablet) {
+  .features__content {
+    padding: 55px 23px 0 25px;
+  }
+
+  .features__item {
+    width: 48.1%;
+    padding: 22px 20px 23px 25px;
+    min-height: 232px;
+  }
+
+  .features__icon {
+    margin-bottom: 2px;
+  }
+
+  .features__icon--watch {
+    svg {
+      width: 32px;
+      height: 36px;
+    }
+  }
+
+  .features__icon--hired {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .features__icon--detective {
+    svg {
+      width: 31px;
+      height: 33px;
+    }
+  }
+
+  .features__icon--tag {
+    svg {
+      width: 33px;
+      height: 35px;
+    }
+  }
+
+  .features__title {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .features__content {
+    flex-direction: column;
+    padding: 37px 15px;
+  }
+
+  .features__title {
+    font-size: 20px;
+    line-height: 140.62%;
+  }
+
+  .features__item {
+    width: 100%;
+    margin-right: 0;
+    padding: 25px 10px 25px 22px;
+    margin-bottom: 19px;
+  }
+
+  .features__icon {
+    margin-bottom: 7px;
+  }
+}

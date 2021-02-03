@@ -29,6 +29,14 @@ body {
   display: block;
 }
 
+.title {
+  font-family: $title-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}
+
 @media (max-width: $tablet) {
 
   .mobile-only {
@@ -41,6 +49,11 @@ body {
 
   .desktop-only {
     display: none;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 140.62%;
   }
 }
 
@@ -55,5 +68,10 @@ body {
 
   .desktop-only {
     display: none;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 140.62%;
   }
 }
