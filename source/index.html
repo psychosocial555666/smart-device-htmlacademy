@@ -10,6 +10,48 @@
 </head>
 
 <body>
+  <section class="modal">
+    <div class="modal__overflow">
+      <article class="modal__popup">
+        <button class="modal__close">
+          <svg width="17" height="17">
+            <use xlink:href="./img/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <form action="#" class="modal__form page-form">
+          <h2 class="modal__title title">
+            Закажите звонок
+          </h2>
+          <p class="modal__text">
+            Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          </p>
+          <div class="modal__item page-form__item">
+            <input type="text" id="username" placeholder="Имя" class="modal__field question__field--username page-form__field page-form__field--username">
+            <label for="username" class="modal__label page-form__label"></label>
+          </div>
+          <div class="modal__item  page-form__item">
+            <input type="tel" id="tel" placeholder="Телефон" class="modal__field question__field--tel page-form__field page-form__field--tel">
+            <label for="tel" class="modal__label page-form__label"></label>
+          </div>
+          <div class="modal__item modal__item--user-question page-form__item page-form__item--user-question">
+            <textarea name="user-question" class="modal__user-question page-form__user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <div class="modal__item page-form__item">
+            <button class="modal__submit page-form__submit button">
+              Отправить
+            </button>
+          </div>
+          <div class="modal__item page-form__item">
+            <input type="checkbox" id="agreement" placeholder="Телефон" class="modal__agreement page-form__agreement">
+            <label for="agreement" class="modal__label modal__label--agreement page-form__label--agreement">
+              Я согласен на обработку  персональных данных
+            </label>
+          </div>
+        </form>
+      </article>
+    </div>
+  </section>
+
   <header class="page-header">
     <div class="container">
       <div class="page-header__content">
