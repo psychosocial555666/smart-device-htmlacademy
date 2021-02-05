@@ -1,9 +1,10 @@
 @font-face {
   font-family: "RobotoCondensed";
   src:
+    local("RobotoCondensed"),
     url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
-    // url("../fonts/RobotoCondensed-Regular.ttf") format("ttf");
+    url("../fonts/RobotoCondensed-Regular.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,9 +13,10 @@
 @font-face {
   font-family: "RobotoCondensed";
   src:
+    local("RobotoCondensed"),
     url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-    // url("../fonts/RobotoCondensed-Bold.ttf") format("ttf");
+    url("../fonts/RobotoCondensed-Bold.woff") format("woff"),
+    url("../fonts/RobotoCondensed-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -26,6 +28,7 @@
   font-style: normal;
   font-display: swap;
   src:
+    local("PTMono"),
     url("../fonts/PTMono-Regular.woff2") format("woff2"),
     url("../fonts/PTMono-Regular.woff") format("woff"),
     url("../fonts/PTMono-Regular.ttf") format("ttf");

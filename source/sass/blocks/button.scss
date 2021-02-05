@@ -1,8 +1,10 @@
 .button {
   padding: 15px 27px 13px;
-  display: block;
+  display: inline-block;
+  vertical-align: baseline;
   box-sizing: border-box;
   background-color: transparent;
+  text-decoration: none;
   border: none;
   outline: none;
   border-radius: 5px;

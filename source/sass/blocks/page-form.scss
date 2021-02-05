@@ -47,7 +47,7 @@
 .page-form__agreement {
   display: none;
 
-  &:checked+label {
+  &:checked + label {
     &::before {
       background: url("../../img/tick.svg") top 3px left 2px no-repeat;
     }
@@ -89,7 +89,7 @@
 
   .page-form__label--agreement {
     padding-left: 34px;
-    padding-top: 0px;
+    padding-top: 0;
 
     &::before {
       top: 0;

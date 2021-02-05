@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -38,8 +42,13 @@ body {
   margin: 0;
 }
 
-@media (max-width: $tablet) {
+.light-wrapper {
+  background-image: url("../img/light-back-desktop.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+@media (max-width: $tablet) {
   .mobile-only {
     display: none;
   }
@@ -55,6 +64,10 @@ body {
   .title {
     font-size: 32px;
     line-height: 140.62%;
+  }
+
+  .light-wrapper {
+    background-image: url("../img/light-back-tablet.webp");
   }
 }
 
@@ -74,5 +87,9 @@ body {
   .title {
     font-size: 28px;
     line-height: 140.62%;
+  }
+
+  .light-wrapper {
+    background-image: url("../img/light-back-mobile.webp");
   }
 }

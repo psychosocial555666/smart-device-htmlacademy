@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart device</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <section class="modal">
-    <div class="modal__overflow">
+    <h2 class="visually-hidden">Модальное окно</h2>
+    <div class="modal__overlay">
       <article class="modal__popup">
         <button class="modal__close">
           <svg width="17" height="17">
@@ -26,15 +30,18 @@
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
           <div class="modal__item page-form__item">
-            <input type="text" id="username" placeholder="Имя" class="modal__field question__field--username page-form__field page-form__field--username">
-            <label for="username" class="modal__label page-form__label"></label>
+            <input type="text" id="popup-username" placeholder="Имя"
+              class="modal__field modal__field--username page-form__field page-form__field--username">
+            <label for="popup-username" class="modal__label page-form__label"></label>
           </div>
           <div class="modal__item  page-form__item">
-            <input type="tel" id="tel" placeholder="Телефон" class="modal__field question__field--tel page-form__field page-form__field--tel">
-            <label for="tel" class="modal__label page-form__label"></label>
+            <input type="tel" id="popup-tel" placeholder="Телефон"
+              class="modal__field modal__field--tel page-form__field page-form__field--tel">
+            <label for="popup-tel" class="modal__label page-form__label"></label>
           </div>
           <div class="modal__item modal__item--user-question page-form__item page-form__item--user-question">
-            <textarea name="user-question" class="modal__user-question page-form__user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+            <textarea name="user-question" class="modal__user-question page-form__user-question" cols="30" rows="1"
+              placeholder="Ваш вопрос"></textarea>
           </div>
           <div class="modal__item page-form__item">
             <button class="modal__submit page-form__submit button">
@@ -42,9 +49,10 @@
             </button>
           </div>
           <div class="modal__item page-form__item">
-            <input type="checkbox" id="agreement" placeholder="Телефон" class="modal__agreement page-form__agreement">
-            <label for="agreement" class="modal__label modal__label--agreement page-form__label--agreement">
-              Я согласен на обработку  персональных данных
+            <input type="checkbox" id="popup-agreement"
+              class="modal__agreement page-form__agreement" required checked>
+            <label for="popup-agreement" class="modal__label modal__label--agreement page-form__label--agreement">
+              Я согласен на обработку персональных данных
             </label>
           </div>
         </form>
@@ -55,7 +63,7 @@
   <header class="page-header">
     <div class="container">
       <div class="page-header__content">
-        <a href="#" class="page-header__logo">
+        <a class="page-header__logo">
           <svg class="page-header__logo-big" width="202" height="52">
             <use xlink:href="./img/sprite.svg#logo"></use>
           </svg>
@@ -98,100 +106,109 @@
         <p class="main-screen__text">
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <button class="main-screen__consult button">
+        <a href="#questions-block" class="main-screen__consult button">
           <span class="main-screen__label">Получить бесплатную консультацию</span>
           <span class="main-screen__label--mobile">Бесплатная консультация</span>
-        </button>
-      </div>
-    </div>
-  </section>
-  <section class="features">
-    <div class="container-inner">
-      <div class="features__content">
-        <article class="features__item">
-          <div class="features__icon features__icon--watch">
-            <svg width="29" height="35">
-              <use xlink:href="./img/sprite.svg#stopwatch"></use>
-            </svg>
-          </div>
-          <h3 class="features__title">
-            Оперативные сроки
-          </h3>
-          <p class="features__text">
-            Усовершенствованная логистическая система позволяет нам <br class="mobile-only"> просчитывать стоимость,
-            производить и доставлять заказы плат и комплектующих в самые короткие сроки
-          </p>
-        </article>
-        <article class="features__item">
-          <div class="features__icon features__icon--hired">
-            <svg width="35" height="35">
-              <use xlink:href="./img/sprite.svg#hired"></use>
-            </svg>
-          </div>
-          <h3 class="features__title">
-            Крупные поставщики
-          </h3>
-          <p class="features__text">
-            Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
-          </p>
-        </article>
-        <article class="features__item">
-          <div class="features__icon features__icon--detective">
-            <svg width="36" height="31">
-              <use xlink:href="./img/sprite.svg#detective"></use>
-            </svg>
-          </div>
-          <h3 class="features__title">
-            Полная конфиденциальность
-          </h3>
-          <p class="features__text">
-            По желанию клиента мы обеспечиваем полную конфеденциальность.
-          </p>
-        </article>
-        <article class="features__item">
-          <div class="features__icon features__icon--tag">
-            <svg width="35" height="35">
-              <use xlink:href="./img/sprite.svg#tag"></use>
-            </svg>
-          </div>
-          <h3 class="features__title">
-            Персонализация стоимости
-          </h3>
-          <p class="features__text">
-            Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы <br class="mobile-only"> установить ту
-            цену, которая Вас устраивает. </p>
-        </article>
+        </a>
+        <a href="#features-block" class="main-screen__link-below">
+          Скролл вниз
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="about-us">
-    <div class="container-inner">
-      <div class="about-us__content">
-        <h2 class="about-us__title title">
-          О компании
-        </h2>
-        <p class="about-us__text">
-          Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
-          года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-          <br>
-          <br>
-          <br class="mobile-only">
-          Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
-          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-          <span class="desktop-only">
-            (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-            светотехники России.
-
-          </span>
-        </p>
-        <button class="about-us__more button">
-          Подробнее
-        </button>
+  <div class="light-wrapper">
+    <section class="features">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <a href="#" id="features-block"></a>
+      <div class="container-inner">
+        <div class="features__content">
+          <article class="features__item">
+            <div class="features__icon features__icon--watch">
+              <svg width="29" height="35">
+                <use xlink:href="./img/sprite.svg#stopwatch"></use>
+              </svg>
+            </div>
+            <h3 class="features__title">
+              Оперативные сроки
+            </h3>
+            <p class="features__text">
+              Усовершенствованная логистическая система позволяет нам <br class="mobile-only"> просчитывать стоимость,
+              производить и доставлять заказы плат и комплектующих в самые короткие сроки
+            </p>
+          </article>
+          <article class="features__item">
+            <div class="features__icon features__icon--hired">
+              <svg width="35" height="35">
+                <use xlink:href="./img/sprite.svg#hired"></use>
+              </svg>
+            </div>
+            <h3 class="features__title">
+              Крупные поставщики
+            </h3>
+            <p class="features__text">
+              Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+            </p>
+          </article>
+          <article class="features__item">
+            <div class="features__icon features__icon--detective">
+              <svg width="36" height="31">
+                <use xlink:href="./img/sprite.svg#detective"></use>
+              </svg>
+            </div>
+            <h3 class="features__title">
+              Полная конфиденциальность
+            </h3>
+            <p class="features__text">
+              По желанию клиента мы обеспечиваем полную конфеденциальность.
+            </p>
+          </article>
+          <article class="features__item">
+            <div class="features__icon features__icon--tag">
+              <svg width="35" height="35">
+                <use xlink:href="./img/sprite.svg#tag"></use>
+              </svg>
+            </div>
+            <h3 class="features__title">
+              Персонализация стоимости
+            </h3>
+            <p class="features__text">
+              Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы <br class="mobile-only"> установить ту
+              цену, которая Вас устраивает. </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="about-us">
+      <div class="container-inner">
+        <div class="about-us__content">
+          <h2 class="about-us__title title">
+            О компании
+          </h2>
+          <p class="about-us__text">
+            Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
+            года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+            <br>
+            <br>
+            <br class="mobile-only">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+            <span class="desktop-only">
+              (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+              Производители
+              светотехники России.
+
+            </span>
+          </p>
+          <button class="about-us__more button">
+            Подробнее
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <section class="catalog">
     <div class="container-inner">
@@ -204,7 +221,13 @@
             <h3 class="catalog__name">
               Производство <br> печатных плат
             </h3>
-            <img src="./img/card-1-desktop.jpg" alt="Производство печатных плат" class="catalog__picture">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/card-1-mobile.webp 1x, ./img/card-1-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/card-1-tablet.webp 1x, ./img/card-1-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)"
+                srcset="./img/card-1-desktop.webp 1x, ./img/card-1-desktop@2x.webp 2x">
+              <img src="./img/card-1-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
+            </picture>
           </a>
         </article>
 
@@ -213,8 +236,13 @@
             <h3 class="catalog__name">
               Монтаж печатных <br> плат
             </h3>
-            <img src="./img/card-2-desktop.jpg" alt="Монтаж печатных плат" class="catalog__picture">
-          </a>
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/card-2-mobile.webp 1x, ./img/card-2-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/card-2-tablet.webp 1x, ./img/card-2-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)"
+                srcset="./img/card-2-desktop.webp 1x, ./img/card-2-desktop@2x.webp 2x">
+              <img src="./img/card-2-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
+            </picture>          </a>
         </article>
 
         <article class="catalog__item">
@@ -222,14 +250,20 @@
             <h3 class="catalog__name">
               Комплектующие <br> для светотехники
             </h3>
-            <img src="./img/card-3-desktop.jpg" alt="Комплектующие для светотехники" class="catalog__picture">
-          </a>
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/card-3-mobile.webp 1x, ./img/card-3-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/card-3-tablet.webp 1x, ./img/card-3-tablet@2x.webp 2x">
+              <source media="(min-width: 1024px)"
+                srcset="./img/card-3-desktop.webp 1x, ./img/card-3-desktop@2x.webp 2x">
+              <img src="./img/card-3-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
+            </picture>          </a>
         </article>
       </div>
     </div>
   </section>
 
   <section class="questions">
+    <a href="#" id="questions-block" ></a>
     <div class="container-inner">
       <form action="#" class="questions__form page-form">
         <h2 class="questions__title title">
@@ -239,15 +273,18 @@
           Мы проконсультируем Вас бесплатно
         </p>
         <div class="questions__item page-form__item">
-          <input type="text" id="username" placeholder="Имя" class="questions__field question__field--username page-form__field page-form__field--username">
+          <input type="text" id="username" placeholder="Имя"
+            class="questions__field question__field--username page-form__field page-form__field--username" required>
           <label for="username" class="questions__label page-form__label"></label>
         </div>
         <div class="questions__item  page-form__item">
-          <input type="tel" id="tel" placeholder="Телефон" class="questions__field question__field--tel page-form__field page-form__field--tel">
+          <input type="tel" id="tel" placeholder="Телефон"
+            class="questions__field question__field--tel page-form__field page-form__field--tel" required>
           <label for="tel" class="questions__label page-form__label"></label>
         </div>
         <div class="questions__item questions__item--user-question page-form__item page-form__item--user-question">
-          <textarea name="user-question" class="questions__user-question page-form__user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+          <textarea name="user-question" class="questions__user-question page-form__user-question" cols="30" rows="1"
+            placeholder="Ваш вопрос" required></textarea>
         </div>
         <div class="questions__item page-form__item">
           <button class="questions__submit page-form__submit button">
@@ -255,9 +292,9 @@
           </button>
         </div>
         <div class="questions__item page-form__item">
-          <input type="checkbox" id="agreement" placeholder="Телефон" class="questions__agreement page-form__agreement">
+          <input type="checkbox" id="agreement" class="questions__agreement page-form__agreement" required>
           <label for="agreement" class="questions__label page-form__label--agreement">
-            Я согласен на обработку  персональных данных
+            Я согласен на обработку персональных данных
           </label>
         </div>
       </form>
@@ -268,7 +305,7 @@
     <div class="container">
       <div class="page-footer__content">
         <div class="page-footer__socials social">
-          <a href="#" class="social__logo">
+          <a class="social__logo">
             <svg width="216" height="52">
               <use xlink:href="./img/sprite.svg#footer-logo"></use>
             </svg>
@@ -294,8 +331,8 @@
               <a href="#" class="social__link">
                 <svg width="27" height="27">
                   <use xlink:href="./img/sprite.svg#vk"></use>
-                  <span class="visually-hidden">Мы во ВКонтакте</span>
                 </svg>
+                <span class="visually-hidden">Мы во ВКонтакте</span>
               </a>
             </li>
           </ul>
@@ -391,6 +428,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

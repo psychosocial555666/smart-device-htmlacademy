@@ -1,9 +1,13 @@
 .main-screen {
-  background:
-    url("../img/back-main-desktop.webp") no-repeat top center;
+  background: url("../img/back-main-desktop.webp") no-repeat top center;
   background-size: cover;
   background-color: $dark;
   overflow: hidden;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-main-desktop@2x.webp") no-repeat top center;
+    background-size: cover;
+  }
 }
 
 .main-screen__content {
@@ -17,9 +21,13 @@
     right: -74px;
     width: 705px;
     height: 515px;
-    background:
-      url("../img/board.webp") no-repeat center;
+    background: url("../img/board.webp") no-repeat center;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/board@2x.webp") no-repeat top center;
+      background-size: 100%;
+    }
   }
 }
 
@@ -69,10 +77,29 @@
   display: none;
 }
 
+.main-screen__link-below {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: rgba($white, 0.5);
+  position: absolute;
+  left: -34px;
+  bottom: 128px;
+  transform: rotate(-90deg);
+}
+
 @media (max-width: $tablet) {
   .main-screen {
     background-image: url("../img/back-main-tablet.webp");
     background-position: top 11px center;
+    background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-main-tablet@2x.webp");
+      background-size: 100% auto;
+      background-position: top 11px center;
+      background-color: $dark;
+    }
   }
 
   .main-screen__content {
@@ -108,15 +135,27 @@
     margin-left: 51px;
     padding: 17px 31px 19px;
   }
+
+  .main-screen__link-below {
+    display: none;
+  }
 }
 
 @media (max-width: $mobile) {
   .main-screen {
     background-image: url("../img/back-main-mobile.webp");
     background-position: top center;
+    background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-main-mobile@2x.webp") no-repeat top center;
+      background-size: 100% auto;
+    }
   }
+
   .main-screen__content {
     padding: 285px 15px 70px;
+
     &::before {
       width: 301px;
       height: 220px;

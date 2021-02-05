@@ -1,6 +1,16 @@
 .questions {
   background-color: $accent;
   color: $white;
+  background-image: url("../img/back-form.webp");
+  background-position: 102% 62%;
+  background-size: 91%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-form@2x.webp");
+    background-position: 102% 62%;
+    background-size: 91%;
+  }
 }
 
 .questions__form {
@@ -35,6 +45,10 @@
 }
 
 @media (max-width: $tablet) {
+  .questions {
+    background-image: none;
+  }
+
   .questions__form {
     padding: 80px 85px 63px 93px;
   }
@@ -76,6 +90,4 @@
     width: 100%;
     margin-bottom: 32px;
   }
-
-
 }
