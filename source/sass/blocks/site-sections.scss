@@ -1,9 +1,9 @@
 .site-sections {
   width: 35%;
-}
 
-.site-sections__title {
-  margin-bottom: 26px;
+  h3 {
+    margin-bottom: 26px;
+  }
 }
 
 .site-sections__list {
@@ -46,11 +46,11 @@
     padding: 0 15px;
     border-bottom: 1px solid $grey;
     position: relative;
-  }
 
-  .site-sections__title {
-    margin: 0;
-    padding: 29px 0 27px;
+    h3 {
+      margin: 0;
+      padding: 29px 0 27px;
+    }
   }
 
   .site-sections__list {

@@ -4,6 +4,20 @@
   height: 100vh;
   position: fixed;
   z-index: 10;
+
+  h2 {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 11px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    padding-right: 20px;
+    margin-bottom: 32px;
+  }
 }
 
 .modal--show {
@@ -78,45 +92,33 @@
   }
 }
 
-.modal__title {
-  font-size: 28px;
-  line-height: 140.62%;
-  margin-bottom: 11px;
-}
-
-.modal__text {
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  padding-right: 20px;
-  margin-bottom: 32px;
-}
-
 .modal__item {
   margin-bottom: 33px;
-}
 
-.modal__field {
-  padding: 14px 23px;
-}
-
-.modal__user-question {
-  padding: 10px 23px;
-  height: 104px;
+  input {
+    padding: 14px 23px;
+  }
 }
 
 .modal__item--user-question {
   margin-bottom: 30px;
+
+  textarea {
+    padding: 10px 23px;
+    height: 104px;
+  }
 }
 
-.modal__label--agreement {
-  padding-left: 47px;
-  padding-top: 2px;
-  padding-right: 20px;
+.modal__item--agreement {
+  label {
+    padding-left: 47px;
+    padding-top: 2px;
+    padding-right: 20px;
 
-  &::before {
-    top: 3px;
-    left: -1px;
+    &::before {
+      top: 3px;
+      left: -1px;
+    }
   }
 }
 

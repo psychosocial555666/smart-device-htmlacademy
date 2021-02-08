@@ -16,6 +16,16 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 65px;
+
+  h3 {
+    text-transform: uppercase;
+    color: $dark;
+    font-family: $title-font;
+    font-size: 15px;
+    line-height: 16px;
+    margin: 0;
+    letter-spacing: 0.05em;
+  }
 }
 
 .page-footer__confidentiality {
@@ -34,16 +44,6 @@
   text-decoration: none;
   color: rgba($dark, 0.5);
   letter-spacing: 0.04em;
-}
-
-.page-footer__title {
-  text-transform: uppercase;
-  color: $dark;
-  font-family: $title-font;
-  font-size: 15px;
-  line-height: 16px;
-  margin: 0;
-  letter-spacing: 0.05em;
 }
 
 .page-footer__link {

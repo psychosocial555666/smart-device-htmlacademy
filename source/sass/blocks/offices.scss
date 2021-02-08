@@ -3,10 +3,10 @@
   margin-right: 7px;
   display: flex;
   flex-direction: column;
-}
 
-.offices__title {
-  margin-bottom: 26px;
+  h3 {
+    margin-bottom: 26px;
+  }
 }
 
 .offices__list {
@@ -33,11 +33,11 @@
     width: 100%;
     position: relative;
     border-bottom: 1px solid $grey;
-  }
 
-  .offices__title {
-    margin: 0;
-    padding: 29px 0 27px;
+    h3 {
+      margin: 0;
+      padding: 29px 0 27px;
+    }
   }
 
   .offices__toggle {

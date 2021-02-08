@@ -8,7 +8,6 @@
   <title>Smart device</title>
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
-  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -17,41 +16,38 @@
     <h2 class="visually-hidden">Модальное окно</h2>
     <div class="modal__overlay">
       <article class="modal__popup">
-        <button class="modal__close">
+        <button type="button" class="modal__close">
           <svg width="17" height="17">
             <use xlink:href="./img/sprite.svg#cross"></use>
           </svg>
         </button>
         <form action="#" class="modal__form page-form">
-          <h2 class="modal__title title">
+          <h2 class="title">
             Закажите звонок
           </h2>
-          <p class="modal__text">
+          <p>
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
           </p>
-          <div class="modal__item page-form__item">
-            <input type="text" id="popup-username" placeholder="Имя"
-              class="modal__field modal__field--username page-form__field page-form__field--username">
-            <label for="popup-username" class="modal__label page-form__label"></label>
+          <div class="modal__item modal__item--username page-form__item">
+            <input type="text" id="popup-username" placeholder="Имя">
+            <label for="popup-username"></label>
           </div>
-          <div class="modal__item  page-form__item">
-            <input type="tel" id="popup-tel" placeholder="Телефон"
-              class="modal__field modal__field--tel page-form__field page-form__field--tel">
-            <label for="popup-tel" class="modal__label page-form__label"></label>
+          <div class="modal__item modal__item--tel page-form__item">
+            <input type="tel" id="popup-tel" placeholder="Телефон">
+            <label for="popup-tel"></label>
           </div>
           <div class="modal__item modal__item--user-question page-form__item page-form__item--user-question">
-            <textarea name="user-question" class="modal__user-question page-form__user-question" cols="30" rows="1"
+            <textarea name="user-question" cols="30" rows="1"
               placeholder="Ваш вопрос"></textarea>
           </div>
           <div class="modal__item page-form__item">
-            <button class="modal__submit page-form__submit button">
+            <button type="submit" class="modal__submit page-form__submit button">
               Отправить
             </button>
           </div>
-          <div class="modal__item page-form__item">
-            <input type="checkbox" id="popup-agreement"
-              class="modal__agreement page-form__agreement" required checked>
-            <label for="popup-agreement" class="modal__label modal__label--agreement page-form__label--agreement">
+          <div class="modal__item modal__item--agreement page-form__item page-form__item--agreement">
+            <input type="checkbox" id="popup-agreement" required checked>
+            <label for="popup-agreement">
               Я согласен на обработку персональных данных
             </label>
           </div>
@@ -88,7 +84,7 @@
               +7 (495) 000 52 52
             </span>
           </a>
-          <button class="page-header__callback button">
+          <button type="button" class="page-header__callback button">
             Заказать звонок
           </button>
         </div>
@@ -100,15 +96,15 @@
   <section class="main-screen">
     <div class="container">
       <div class="main-screen__content">
-        <h1 class="main-screen__title">
+        <h1>
           Печатные платы
         </h1>
-        <p class="main-screen__text">
+        <p>
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
         <a href="#questions-block" class="main-screen__consult button">
           <span class="main-screen__label">Получить бесплатную консультацию</span>
-          <span class="main-screen__label--mobile">Бесплатная консультация</span>
+          <span class="main-screen__label main-screen__label--mobile">Бесплатная консультация</span>
         </a>
         <a href="#features-block" class="main-screen__link-below">
           Скролл вниз
@@ -129,10 +125,10 @@
                 <use xlink:href="./img/sprite.svg#stopwatch"></use>
               </svg>
             </div>
-            <h3 class="features__title">
+            <h3>
               Оперативные сроки
             </h3>
-            <p class="features__text">
+            <p>
               Усовершенствованная логистическая система позволяет нам <br class="mobile-only"> просчитывать стоимость,
               производить и доставлять заказы плат и комплектующих в самые короткие сроки
             </p>
@@ -143,10 +139,10 @@
                 <use xlink:href="./img/sprite.svg#hired"></use>
               </svg>
             </div>
-            <h3 class="features__title">
+            <h3>
               Крупные поставщики
             </h3>
-            <p class="features__text">
+            <p>
               Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
               Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
             </p>
@@ -157,10 +153,10 @@
                 <use xlink:href="./img/sprite.svg#detective"></use>
               </svg>
             </div>
-            <h3 class="features__title">
+            <h3>
               Полная конфиденциальность
             </h3>
-            <p class="features__text">
+            <p>
               По желанию клиента мы обеспечиваем полную конфеденциальность.
             </p>
           </article>
@@ -170,10 +166,10 @@
                 <use xlink:href="./img/sprite.svg#tag"></use>
               </svg>
             </div>
-            <h3 class="features__title">
+            <h3>
               Персонализация стоимости
             </h3>
-            <p class="features__text">
+            <p>
               Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы <br class="mobile-only"> установить ту
               цену, которая Вас устраивает. </p>
           </article>
@@ -184,10 +180,10 @@
     <section class="about-us">
       <div class="container-inner">
         <div class="about-us__content">
-          <h2 class="about-us__title title">
+          <h2 class="title">
             О компании
           </h2>
-          <p class="about-us__text">
+          <p>
             Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
             года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             <br>
@@ -199,10 +195,9 @@
               (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
               Производители
               светотехники России.
-
             </span>
           </p>
-          <button class="about-us__more button">
+          <button type="button" class="about-us__more button">
             Подробнее
           </button>
         </div>
@@ -213,87 +208,99 @@
   <section class="catalog">
     <div class="container-inner">
       <div class="catalog__content">
-        <h2 class="catalog__title title">
+        <h2 class="title">
           Service Device предлагает следующие товары и услуги
         </h2>
         <article class="catalog__item">
           <a href="#" class="catalog__link">
-            <h3 class="catalog__name">
+            <h3>
               Производство <br> печатных плат
             </h3>
             <picture>
+              <!-- 1x: 290px; 2x: 580px -->
               <source media="(max-width: 767px)" srcset="./img/card-1-mobile.webp 1x, ./img/card-1-mobile@2x.webp 2x">
+              <!-- 1x: 720px; 2x: 1440px -->
               <source media="(max-width: 1023px)" srcset="./img/card-1-tablet.webp 1x, ./img/card-1-tablet@2x.webp 2x">
+              <!-- 1x: 370px; 2x: 740px -->
               <source media="(min-width: 1024px)"
                 srcset="./img/card-1-desktop.webp 1x, ./img/card-1-desktop@2x.webp 2x">
-              <img src="./img/card-1-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
+              <!-- 1x: 370px; 2x: 740px -->
+              <img src="./img/card-1-desktop.jpg" width="370" height="620" alt="Производство печатных плат">
             </picture>
           </a>
         </article>
 
         <article class="catalog__item">
           <a href="#" class="catalog__link">
-            <h3 class="catalog__name">
+            <h3>
               Монтаж печатных <br> плат
             </h3>
             <picture>
+              <!-- 1x: 290px; 2x: 580px -->
               <source media="(max-width: 767px)" srcset="./img/card-2-mobile.webp 1x, ./img/card-2-mobile@2x.webp 2x">
+              <!-- 1x: 720px; 2x: 1440px -->
               <source media="(max-width: 1023px)" srcset="./img/card-2-tablet.webp 1x, ./img/card-2-tablet@2x.webp 2x">
+              <!-- 1x: 370px; 2x: 740px -->
               <source media="(min-width: 1024px)"
                 srcset="./img/card-2-desktop.webp 1x, ./img/card-2-desktop@2x.webp 2x">
-              <img src="./img/card-2-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
-            </picture>          </a>
+              <!-- 1x: 370px; 2x: 740px -->
+              <img src="./img/card-2-desktop.jpg" width="370" height="620" alt="Производство печатных плат">
+            </picture>
+          </a>
         </article>
 
         <article class="catalog__item">
           <a href="#" class="catalog__link">
-            <h3 class="catalog__name">
+            <h3>
               Комплектующие <br> для светотехники
             </h3>
             <picture>
+              <!-- 1x: 290px; 2x: 580px -->
               <source media="(max-width: 767px)" srcset="./img/card-3-mobile.webp 1x, ./img/card-3-mobile@2x.webp 2x">
+              <!-- 1x: 720px; 2x: 1440px -->
               <source media="(max-width: 1023px)" srcset="./img/card-3-tablet.webp 1x, ./img/card-3-tablet@2x.webp 2x">
+              <!-- 1x: 370px; 2x: 740px -->
               <source media="(min-width: 1024px)"
                 srcset="./img/card-3-desktop.webp 1x, ./img/card-3-desktop@2x.webp 2x">
-              <img src="./img/card-3-desktop.jpg" width="370" height="620" alt="Производство печатных плат" class="catalog__picture">
-            </picture>          </a>
+              <!-- 1x: 370px; 2x: 740px -->
+              <img src="./img/card-3-desktop.jpg" width="370" height="620" alt="Производство печатных плат">
+            </picture>
+          </a>
         </article>
       </div>
     </div>
   </section>
 
   <section class="questions">
-    <a href="#" id="questions-block" ></a>
+    <a href="#" id="questions-block"></a>
     <div class="container-inner">
       <form action="#" class="questions__form page-form">
-        <h2 class="questions__title title">
+        <h2 class="title">
           Остались вопросы? Задайте их нам!
         </h2>
-        <p class="questions__text">
+        <p>
           Мы проконсультируем Вас бесплатно
         </p>
-        <div class="questions__item page-form__item">
-          <input type="text" id="username" placeholder="Имя"
-            class="questions__field question__field--username page-form__field page-form__field--username" required>
-          <label for="username" class="questions__label page-form__label"></label>
+        <div class="questions__item questions__item--username page-form__item">
+          <input type="text" id="username" placeholder="Имя" required>
+          <label for="username"></label>
         </div>
-        <div class="questions__item  page-form__item">
-          <input type="tel" id="tel" placeholder="Телефон"
-            class="questions__field question__field--tel page-form__field page-form__field--tel" required>
-          <label for="tel" class="questions__label page-form__label"></label>
+        <div class="questions__item questions__item--tel page-form__item">
+          <input type="tel" id="tel" placeholder="Телефон" required>
+          <label for="tel"></label>
         </div>
         <div class="questions__item questions__item--user-question page-form__item page-form__item--user-question">
-          <textarea name="user-question" class="questions__user-question page-form__user-question" cols="30" rows="1"
+          <textarea name="user-question" cols="30" rows="1"
             placeholder="Ваш вопрос" required></textarea>
         </div>
         <div class="questions__item page-form__item">
-          <button class="questions__submit page-form__submit button">
+          <button type="button" class="questions__submit page-form__submit button">
             Задать вопрос
           </button>
         </div>
-        <div class="questions__item page-form__item">
-          <input type="checkbox" id="agreement" class="questions__agreement page-form__agreement" required>
-          <label for="agreement" class="questions__label page-form__label--agreement">
+        <div class="questions__item page-form__item page-form__item--agreement">
+          <input type="checkbox" id="agreement" required>
+          <label for="agreement">
             Я согласен на обработку персональных данных
           </label>
         </div>
@@ -345,7 +352,7 @@
           <h3 class="site-sections__title page-footer__title">
             Разделы сайта
           </h3>
-          <button class="site-sections__toggle">
+          <button type="button" class="site-sections__toggle">
             <span class="visually-hidden">Открыть или закрыть меню</span>
           </button>
           <ul class="site-sections__list">
@@ -391,7 +398,7 @@
           <h3 class="offices__title page-footer__title">
             Наш офис
           </h3>
-          <button class="offices__toggle">
+          <button type="button" class="offices__toggle">
             <span class="visually-hidden">Открыть или закрыть меню</span>
           </button>
           <ul class="offices__list">
@@ -418,7 +425,7 @@
           </ul>
         </div>
         <div class="page-footer__info info">
-          <a class="page-footer__confidentiality">
+          <a href="#" class="page-footer__confidentiality">
             Условия конфиденциальности
           </a>
           <span class="page-footer__signature">

@@ -4,18 +4,18 @@
   background-image: url("../img/2005.webp");
   background-repeat: no-repeat;
   background-position: -29px 80px;
-}
 
-.about-us__title {
-  margin: 0;
-  margin-bottom: 21px;
-}
+  h2 {
+    margin: 0;
+    margin-bottom: 21px;
+  }
 
-.about-us__text {
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  margin-bottom: 36px;
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 36px;
+  }
 }
 
 .about-us__more {
@@ -29,15 +29,15 @@
     padding: 26px 20px 82px 210px;
     background-size: 253px 359px;
     background-position: -10px 26px;
-  }
 
-  .about-us__title {
-    margin-bottom: 26px;
-  }
+    h2 {
+      margin-bottom: 26px;
+    }
 
-  .about-us__text {
-    padding-left: 3px;
-    margin-bottom: 39px;
+    p {
+      padding-left: 3px;
+      margin-bottom: 39px;
+    }
   }
 
   .about-us__more {
@@ -49,13 +49,13 @@
   .about-us__content {
     padding: 1px 14px 64px;
     background-image: none;
-  }
 
-  .about-us__title {
-    margin-bottom: 20px;
-  }
+    h2 {
+      margin-bottom: 20px;
+    }
 
-  .about-us__text {
-    margin-bottom: 25px;
+    p {
+      margin-bottom: 25px;
+    }
   }
 }
