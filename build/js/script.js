@@ -149,4 +149,3 @@
     offices.classList.toggle('offices--opened');
   });
 })();
-
