@@ -3,6 +3,7 @@
   var modal = document.querySelector('.modal');
   var callMeBackButton = document.querySelector('.page-header__callback');
   var modalForm = document.querySelector('.modal__form');
+  var questionsForm = document.querySelector('.questions__form');
   var modalPopup = document.querySelector('.modal__popup');
   var pageBody = document.querySelector('body');
   var storage = window.localStorage;
@@ -59,6 +60,24 @@
     }
   };
 
+  var onQuestionSubmit = function (evt) {
+    var tel = evt.target.querySelector('.questions__item--tel input');
+    var name = evt.target.querySelector('.questions__item--username input');
+    var agreement = evt.target.querySelector('.questions__item input[type="checkbox"]');
+    if (tel.value === '') {
+      evt.preventDefault();
+      tel.parentNode.classList.add('page-form__item--invalid');
+    }
+    if (name.value === '') {
+      evt.preventDefault();
+      name.parentNode.classList.add('page-form__item--invalid');
+    }
+    if (!agreement.checked) {
+      evt.preventDefault();
+      agreement.parentNode.classList.add('page-form__item--invalid');
+    }
+  };
+
   var onModalOpen = function (evt) {
     openModal(modal, evt);
   };
@@ -86,6 +105,10 @@
 
   if (modalForm) {
     modalForm.addEventListener('submit', onModalSubmit);
+  }
+
+  if (questionsForm) {
+    questionsForm.addEventListener('submit', onQuestionSubmit);
   }
 })();
 

@@ -19,12 +19,6 @@
     <h2 class="visually-hidden">Модальное окно</h2>
     <div class="modal__overlay">
       <article class="modal__popup">
-        <button type="button" class="modal__close">
-          <span class="visually-hidden">Закрыть</span>
-          <svg width="17" height="17">
-            <use xlink:href="./img/sprite.svg#cross"></use>
-          </svg>
-        </button>
         <form action="#" class="modal__form page-form">
           <h2 class="title">
             Закажите звонок
@@ -50,12 +44,18 @@
             </button>
           </div>
           <div class="modal__item modal__item--agreement page-form__item page-form__item--agreement">
-            <input type="checkbox" id="popup-agreement" required checked>
-            <label for="popup-agreement">
+            <input type="checkbox" id="popup-agreement" required>
+            <label for="popup-agreement" tabindex="0">
               Я согласен на обработку персональных данных
             </label>
           </div>
         </form>
+        <button type="button" class="modal__close">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="17" height="17">
+            <use xlink:href="./img/sprite.svg#cross"></use>
+          </svg>
+        </button>
       </article>
     </div>
   </section>
@@ -72,13 +72,8 @@
           </svg>
         </a>
         <div class="page-header__contacts">
-          <a href="mailto:info@sd.ru" name="our-email" class="page-header__item page-header__link page-header__email">
-            <svg width="19" height="14">
-              <use xlink:href="./img/sprite.svg#envelope"></use>
-            </svg>
-            <span>
-              info@sd.ru
-            </span>
+          <a href="./modal.html" type="button" class="page-header__item page-header__callback button">
+            Заказать звонок
           </a>
           <a href="tel:+74950005252" name="our-number" class="page-header__item page-header__link page-header__tel">
             <svg width="18" height="18">
@@ -88,8 +83,13 @@
               +7 (495) 000 52 52
             </span>
           </a>
-          <a href="./modal.html" type="button" class="page-header__item page-header__callback button">
-            Заказать звонок
+          <a href="mailto:info@sd.ru" name="our-email" class="page-header__item page-header__link page-header__email">
+            <svg width="19" height="14">
+              <use xlink:href="./img/sprite.svg#envelope"></use>
+            </svg>
+            <span>
+              info@sd.ru
+            </span>
           </a>
         </div>
       </div>
@@ -277,7 +277,7 @@
 
   <section class="questions" id="questions-block">
     <div class="container-inner">
-      <form action="#" class="questions__form page-form">
+      <form action="#" method="POST" class="questions__form page-form">
         <h2 class="title">
           Остались вопросы? Задайте их нам!
         </h2>
@@ -285,16 +285,22 @@
           Мы проконсультируем Вас бесплатно
         </p>
         <div class="questions__item questions__item--username page-form__item">
-          <input type="text" id="username" placeholder="Имя" required>
-          <label for="username" class="visually-hidden">Имя</label>
+          <input type="text" id="username" placeholder="Имя">
+          <label for="username">
+            <span class="visually-hidden">Имя</span>
+          </label>
         </div>
         <div class="questions__item questions__item--tel page-form__item">
-          <input type="tel" id="tel" placeholder="Телефон" required>
-          <label for="tel" class="visually-hidden">Номер телефона</label>
+          <input type="tel" id="tel" placeholder="Телефон">
+          <label for="tel">
+            <span class="visually-hidden">Номер телефона</span>
+          </label>
         </div>
         <div class="questions__item questions__item--user-question page-form__item page-form__item--user-question">
           <textarea id="user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
-          <label for="user-question" class="visually-hidden">Ваш вопрос</label>
+          <label for="user-question">
+            <span class="visually-hidden">Ваш вопрос</span>
+          </label>
         </div>
         <div class="questions__item page-form__item">
           <button type="submit" class="questions__submit page-form__submit button">
@@ -302,7 +308,7 @@
           </button>
         </div>
         <div class="questions__item page-form__item page-form__item--agreement">
-          <input type="checkbox" id="agreement" required checked>
+          <input type="checkbox" id="agreement">
           <label for="agreement" tabindex="0">
             Я согласен на обработку персональных данных
           </label>

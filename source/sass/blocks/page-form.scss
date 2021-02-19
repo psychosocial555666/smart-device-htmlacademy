@@ -27,6 +27,23 @@
   }
 }
 
+.page-form__item--invalid {
+  label {
+    position: relative;
+    &::after {
+      content: "Это поле является обязательным";
+      position: absolute;
+      bottom: -20px;
+      left: 5px;
+      color: red;
+      font-size: 12px;
+      z-index: 10;
+      display: block;
+      width: 220px;
+    }
+  }
+}
+
 .page-form__item--user-question {
   textarea {
     display: block;

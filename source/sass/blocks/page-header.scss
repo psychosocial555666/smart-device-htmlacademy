@@ -14,6 +14,7 @@
 
 .page-header__contacts {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   flex-wrap: wrap;
   max-width: 70%;
@@ -27,6 +28,7 @@
   font-size: 16px;
   line-height: 18px;
   height: 100%;
+  order: 1;
 
   svg {
     fill: $accent;
@@ -63,7 +65,7 @@
 
 .page-header__callback {
   border: 1px solid $white;
-
+  order: 0;
   &:hover, &:focus {
     color: $accent;
     border-color: $accent;
