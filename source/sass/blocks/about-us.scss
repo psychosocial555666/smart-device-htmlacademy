@@ -1,9 +1,13 @@
 .about-us__content {
   padding: 75px 20px 110px 180px;
   color: $dark-grey;
-  background-image: url("../img/2005.webp");
+  background-image: url("../img/2005.jpeg");
   background-repeat: no-repeat;
   background-position: -29px 80px;
+
+  @supports(background-image: url("../img/2005.webp")) {
+    background-image: url("../img/2005.webp");
+  }
 
   h2 {
     margin: 0;
@@ -20,8 +24,18 @@
 
 .about-us__more {
   color: $accent;
+  text-align: center;
   border: 1px solid $accent;
   width: 180px;
+
+  &:hover, &:focus {
+    color: $white;
+    background-color: $accent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: $tablet) {

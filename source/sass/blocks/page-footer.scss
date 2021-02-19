@@ -16,6 +16,8 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 65px;
+  justify-content: flex-start;
+  position: relative;
 
   h3 {
     text-transform: uppercase;
@@ -35,6 +37,15 @@
   text-decoration: none;
   color: rgba($dark, 0.5);
   letter-spacing: 0.04em;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+
+  &:active {
+    color: rgba($accent, 0.6);
+  }
 }
 
 .page-footer__signature {
@@ -56,7 +67,8 @@
 .page-footer__info {
   display: flex;
   justify-content: space-between;
-  padding: 15px 8px 15px 600px;
+  padding: 15px 8px 0 600px;
+  height: 52px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -64,13 +76,12 @@
 @media (max-width: $tablet) {
   .page-footer {
     &::before {
-      bottom: 69px;
+      bottom: 74px;
     }
   }
 
   .page-footer__content {
     padding-top: 0;
-    padding-bottom: 24px;
   }
 
   .page-footer__info {

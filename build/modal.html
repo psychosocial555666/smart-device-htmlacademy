@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart device</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <section class="modal modal--show">
+    <h2 class="visually-hidden">Модальное окно</h2>
+    <div class="modal__overlay">
+      <article class="modal__popup">
+        <form action="#" class="modal__form page-form">
+          <h2 class="title">
+            Закажите звонок
+          </h2>
+          <p>
+            Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          </p>
+          <div class="modal__item modal__item--username page-form__item">
+            <input type="text" id="popup-username" placeholder="Имя" required="">
+            <label for="popup-username"></label>
+          </div>
+          <div class="modal__item modal__item--tel page-form__item">
+            <input type="tel" id="popup-tel" placeholder="Телефон" required="">
+            <label for="popup-tel"></label>
+          </div>
+          <div class="modal__item modal__item--user-question page-form__item page-form__item--user-question">
+            <textarea name="user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <div class="modal__item page-form__item">
+            <button type="submit" class="modal__submit page-form__submit button">
+              Отправить
+            </button>
+          </div>
+          <div class="modal__item modal__item--agreement page-form__item page-form__item--agreement">
+            <input type="checkbox" id="popup-agreement" required="" checked="">
+            <label for="popup-agreement">
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
+        </form>
+      </article>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 }
 
 .catalog__content {
-  padding: 88px 0 127px;
+  padding: 88px 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -19,22 +19,8 @@
 .catalog__item {
   width: 31.62%;
   height: 620px;
-  position: relative;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 63px;
-    height: 63px;
-    bottom: 0;
-    right: 0;
-    background-color: $accent;
-    background-image: url("../img/arrow-left.svg");
-    background-repeat: no-repeat;
-    background-position: 31px 26px;
-  }
+  margin-bottom: 27px;
 
   h3 {
     position: absolute;
@@ -57,12 +43,39 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  &:hover, &:focus {
+    img {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    img {
+      opacity: 0.3;
+    }
+  }
 }
 
 .catalog__link {
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-color: $accent;
+    background-image: url("../img/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: 31px 26px;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -109,13 +122,15 @@
       margin-bottom: 0;
     }
 
-    &::before {
-      background-position: 28px 27px;
-    }
-
     h3 {
       top: 20px;
       left: 35px;
+    }
+  }
+
+  .catalog__link {
+    &::before {
+      background-position: 28px 27px;
     }
   }
 }

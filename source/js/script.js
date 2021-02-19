@@ -4,11 +4,14 @@
   var callMeBackButton = document.querySelector('.page-header__callback');
   var modalForm = document.querySelector('.modal__form');
   var modalPopup = document.querySelector('.modal__popup');
+  var pageBody = document.querySelector('body');
   var storage = window.localStorage;
 
-  var openModal = function (modalItem) {
+  var openModal = function (modalItem, evt) {
+    evt.preventDefault();
     if (modalItem) {
       modalItem.classList.add('modal--show');
+      pageBody.classList.add('modal-overlay');
       var closeModalButton = modalItem.querySelector('.modal__close');
       var modalOverlay = modalItem.querySelector('.modal__overlay');
       var userNameField = modalItem.querySelector('.modal__item--username input');
@@ -30,6 +33,7 @@
 
   var closeModal = function () {
     modal.classList.remove('modal--show');
+    pageBody.classList.remove('modal-overlay');
     var modalOverlay = modal.querySelector('.modal__overlay');
     var closeModalButton = modal.querySelector('.modal__close');
     closeModalButton.removeEventListener('click', onCloseButtonPress);
@@ -55,8 +59,8 @@
     }
   };
 
-  var onModalOpen = function () {
-    openModal(modal);
+  var onModalOpen = function (evt) {
+    openModal(modal, evt);
   };
 
   var onCloseButtonPress = function () {
@@ -135,17 +139,27 @@
 })();
 
 (function () {
-  var siteSectionToggle = document.querySelector('.site-sections__toggle');
-  var officesToggle = document.querySelector('.offices__toggle');
+  var siteSectionToggle = document.querySelector('.site-sections__wrapper');
+  var officesToggle = document.querySelector('.offices__wrapper');
 
   var siteSection = document.querySelector('.site-sections');
   var offices = document.querySelector('.offices');
 
+  siteSection.classList.remove('site-sections--nojs');
+  offices.classList.remove('offices--nojs');
+
   siteSectionToggle.addEventListener('click', function () {
     siteSection.classList.toggle('site-sections--opened');
+    if (offices.classList.contains('offices--opened')) {
+      offices.classList.toggle('offices--opened');
+    }
   });
 
   officesToggle.addEventListener('click', function () {
     offices.classList.toggle('offices--opened');
+
+    if (siteSection.classList.contains('site-sections--opened')) {
+      siteSection.classList.toggle('site-sections--opened');
+    }
   });
 })();

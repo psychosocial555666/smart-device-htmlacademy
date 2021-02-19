@@ -15,6 +15,8 @@
 .page-header__contacts {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
 }
 
 .page-header__link {
@@ -31,15 +33,29 @@
     display: flex;
     margin-right: 20px;
   }
+
+  &:hover, &:focus {
+    color: $accent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__item {
+  margin-right: 48px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .page-header__email {
-  margin-right: 88px;
+  padding-right: 40px;
 }
 
 .page-header__tel {
-  margin-right: 48px;
-
   svg {
     margin-right: 17px;
   }
@@ -47,6 +63,15 @@
 
 .page-header__callback {
   border: 1px solid $white;
+
+  &:hover, &:focus {
+    color: $accent;
+    border-color: $accent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -82,7 +107,7 @@
 
   .page-header__email {
     margin-right: 33px;
-
+    padding-right: 0;
     svg {
       width: 25px;
       height: 19px;

@@ -1,6 +1,5 @@
 .social {
-  width: 29.7%;
-  position: relative;
+  margin-right: auto;
 }
 
 .social__logo {
@@ -10,11 +9,20 @@
 
 .social__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: start;
   list-style: none;
   width: 112px;
   margin: 0;
   padding: 0;
+}
+
+.social__item {
+  margin-right: 15px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .social__link {
@@ -25,11 +33,23 @@
   svg {
     fill: rgba($dark, 0.2);
   }
+
+  &:hover, &:focus {
+    svg {
+      fill: $accent;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($accent, 0.6);
+    }
+  }
 }
 
 .social__copyright {
   position: absolute;
-  bottom: -39px;
+  bottom: 14px;
   left: 0;
   display: flex;
   justify-content: space-between;
@@ -45,6 +65,7 @@
 @media (max-width: $tablet) {
   .social {
     width: 100%;
+    position: relative;
     padding: 20px 25px;
     box-sizing: border-box;
     display: flex;

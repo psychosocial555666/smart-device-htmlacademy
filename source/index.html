@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Учебный проект HTML Academy Smart Device">
+  <meta name="robots" content="nofollow">
+  <meta name="googlebot" content="noindex">
   <title>Smart device</title>
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
@@ -17,6 +20,7 @@
     <div class="modal__overlay">
       <article class="modal__popup">
         <button type="button" class="modal__close">
+          <span class="visually-hidden">Закрыть</span>
           <svg width="17" height="17">
             <use xlink:href="./img/sprite.svg#cross"></use>
           </svg>
@@ -30,15 +34,15 @@
           </p>
           <div class="modal__item modal__item--username page-form__item">
             <input type="text" id="popup-username" placeholder="Имя">
-            <label for="popup-username"></label>
+            <label for="popup-username" class="visually-hidden">Имя</label>
           </div>
           <div class="modal__item modal__item--tel page-form__item">
             <input type="tel" id="popup-tel" placeholder="Телефон">
-            <label for="popup-tel"></label>
+            <label for="popup-tel" class="visually-hidden">Номер телефона</label>
           </div>
           <div class="modal__item modal__item--user-question page-form__item page-form__item--user-question">
-            <textarea name="user-question" cols="30" rows="1"
-              placeholder="Ваш вопрос"></textarea>
+            <textarea id="popup-user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+            <label for="popup-user-question" class="visually-hidden">Ваш вопрос</label>
           </div>
           <div class="modal__item page-form__item">
             <button type="submit" class="modal__submit page-form__submit button">
@@ -68,7 +72,7 @@
           </svg>
         </a>
         <div class="page-header__contacts">
-          <a href="mailto:info@sd.ru" class="page-header__link page-header__email">
+          <a href="mailto:info@sd.ru" name="our-email" class="page-header__item page-header__link page-header__email">
             <svg width="19" height="14">
               <use xlink:href="./img/sprite.svg#envelope"></use>
             </svg>
@@ -76,7 +80,7 @@
               info@sd.ru
             </span>
           </a>
-          <a href="tel:+74950005252" class="page-header__link page-header__tel">
+          <a href="tel:+74950005252" name="our-number" class="page-header__item page-header__link page-header__tel">
             <svg width="18" height="18">
               <use xlink:href="./img/sprite.svg#phone-call"></use>
             </svg>
@@ -84,9 +88,9 @@
               +7 (495) 000 52 52
             </span>
           </a>
-          <button type="button" class="page-header__callback button">
+          <a href="./modal.html" type="button" class="page-header__item page-header__callback button">
             Заказать звонок
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -196,9 +200,9 @@
               светотехники России.
             </span>
           </p>
-          <button type="button" class="about-us__more button">
+          <a href="#" type="button" class="about-us__more button">
             Подробнее
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -266,6 +270,7 @@
             </picture>
           </a>
         </article>
+
       </div>
     </div>
   </section>
@@ -281,24 +286,24 @@
         </p>
         <div class="questions__item questions__item--username page-form__item">
           <input type="text" id="username" placeholder="Имя" required>
-          <label for="username"></label>
+          <label for="username" class="visually-hidden">Имя</label>
         </div>
         <div class="questions__item questions__item--tel page-form__item">
           <input type="tel" id="tel" placeholder="Телефон" required>
-          <label for="tel"></label>
+          <label for="tel" class="visually-hidden">Номер телефона</label>
         </div>
         <div class="questions__item questions__item--user-question page-form__item page-form__item--user-question">
-          <textarea name="user-question" cols="30" rows="1"
-            placeholder="Ваш вопрос" required></textarea>
+          <textarea id="user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
+          <label for="user-question" class="visually-hidden">Ваш вопрос</label>
         </div>
         <div class="questions__item page-form__item">
-          <button type="button" class="questions__submit page-form__submit button">
+          <button type="submit" class="questions__submit page-form__submit button">
             Задать вопрос
           </button>
         </div>
         <div class="questions__item page-form__item page-form__item--agreement">
-          <input type="checkbox" id="agreement" required>
-          <label for="agreement">
+          <input type="checkbox" id="agreement" required checked>
+          <label for="agreement" tabindex="0">
             Я согласен на обработку персональных данных
           </label>
         </div>
@@ -346,13 +351,15 @@
             <span class="social__company">1999-2018 SD Service Devices</span>
           </div>
         </div>
-        <div class="page-footer__site-sections site-sections">
-          <h3 class="site-sections__title page-footer__title">
-            Разделы сайта
-          </h3>
-          <button type="button" class="site-sections__toggle">
-            <span class="visually-hidden">Открыть или закрыть меню</span>
-          </button>
+        <div class="page-footer__site-sections site-sections site-sections--nojs">
+          <div class="site-sections__wrapper">
+            <h3 class="site-sections__title page-footer__title">
+              Разделы сайта
+            </h3>
+            <button type="button" class="site-sections__toggle">
+              <span class="visually-hidden">Открыть или закрыть меню</span>
+            </button>
+          </div>
           <ul class="site-sections__list">
             <li class="site-sections__item">
               <a href="#" class="site-sections__link page-footer__link">
@@ -392,18 +399,21 @@
           </ul>
 
         </div>
-        <div class="page-footer__offices offices offices--opened">
-          <h3 class="offices__title page-footer__title">
-            Наш офис
-          </h3>
-          <button type="button" class="offices__toggle">
-            <span class="visually-hidden">Открыть или закрыть меню</span>
-          </button>
+        <div class="page-footer__offices offices offices--nojs">
+          <div class="offices__wrapper">
+            <h3 class="offices__title page-footer__title">
+              Наш офис
+            </h3>
+            <button type="button" class="offices__toggle">
+              <span class="visually-hidden">Открыть или закрыть меню</span>
+            </button>
+          </div>
+
           <ul class="offices__list">
             <li class="offices__item">
-              <a href="#" class="offices__link page-footer__link">
+              <span class="page-footer__link">
                 г. Мытищи, Олимпийский проспект, д.10
-              </a>
+              </span>
             </li>
             <li class="offices__item">
               <a href="tel:+74955894050" class="offices__link page-footer__link">

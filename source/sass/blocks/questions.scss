@@ -1,15 +1,23 @@
 .questions {
   background-color: $accent;
   color: $white;
-  background-image: url("../img/back-form.webp");
+  background-image: url("../img/back-form.jpeg");
   background-position: 102% 62%;
   background-size: 91%;
   background-repeat: no-repeat;
 
+  @supports(background-image: url("../img/back-form.webp")) {
+    background-image: url("../img/back-form.webp");
+  }
+
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/back-form@2x.webp");
+    background-image: url("../img/back-form@2x.jpeg");
     background-position: 102% 62%;
     background-size: 91%;
+
+    @supports(background-image: url("../img/back-form@2x.webp")) {
+      background-image: url("../img/back-form@2x.webp");
+    }
   }
 }
 

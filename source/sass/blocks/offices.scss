@@ -1,8 +1,8 @@
 .offices {
-  margin-left: auto;
   margin-right: 7px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 
   h3 {
     margin-bottom: 26px;
@@ -17,6 +17,17 @@
 
 .offices__toggle {
   display: none;
+}
+
+.offices__link {
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+
+  &:active {
+    color: rgba($accent, 0.6);
+  }
 }
 
 @media (max-width: $tablet) {
@@ -38,6 +49,10 @@
       margin: 0;
       padding: 29px 0 27px;
     }
+  }
+
+  .offices__title {
+    cursor: pointer;
   }
 
   .offices__toggle {
@@ -67,6 +82,17 @@
 
     .offices__toggle {
       background-image: url("../img/minus.svg");
+    }
+  }
+
+  .offices--nojs {
+    .offices__list {
+      display: block;
+      padding: 4px 0 26px 0;
+    }
+
+    .offices__toggle {
+      display: none;
     }
   }
 }
