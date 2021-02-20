@@ -8,16 +8,23 @@
 
 .page-header__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 33px 4px;
 }
 
 .page-header__contacts {
   display: flex;
   flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 70%;
+  padding-left: 40px;
 }
 
 .page-header__link {
@@ -47,10 +54,8 @@
 
 .page-header__item {
   margin-right: 48px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .page-header__email {
@@ -66,6 +71,8 @@
 .page-header__callback {
   border: 1px solid $white;
   order: 0;
+  margin: 0;
+  min-width: 182px;
   &:hover, &:focus {
     color: $accent;
     border-color: $accent;

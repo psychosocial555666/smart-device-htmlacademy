@@ -1,7 +1,7 @@
 .site-sections {
   box-sizing: border-box;
   padding-left: 20px;
-  margin-right: 25%;
+  margin-right: 11.9%;
 
   h3 {
     margin-bottom: 26px;
@@ -12,10 +12,9 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   box-sizing: border-box;
   margin-bottom: 58px;
   max-height: 115px;
@@ -23,7 +22,7 @@
 }
 
 .site-sections__item {
-  margin-right: 65px;
+  margin-right: 67px;
 }
 
 .site-sections__link {
@@ -54,6 +53,9 @@
   .site-sections__list {
     max-height: 100%;
     margin-bottom: 57px;
+    display: flex;
+    flex-direction: column;
+    
   }
 }
 

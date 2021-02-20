@@ -10,7 +10,7 @@
     color: $white;
     width: 100%;
     box-sizing: border-box;
-    border-radius: none;
+    border-radius: 0;
 
     &::placeholder {
       color: $white;
@@ -94,7 +94,7 @@
 
     &:checked + label {
       &::before {
-        background: url("../../img/tick.svg") top 3px left 2px no-repeat;
+        background: url("../img/tick.svg") top 3px left 2px no-repeat;
       }
     }
   }
