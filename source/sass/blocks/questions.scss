@@ -1,7 +1,7 @@
 .questions {
   background-color: $accent;
   color: $white;
-  background-image: url("../img/back-form.jpeg");
+  background-image: url("../img/back-form.png");
   background-position: 102% 62%;
   background-size: 91%;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/back-form@2x.jpeg");
+    background-image: url("../img/back-form@2x.png");
     background-position: 102% 62%;
     background-size: 91%;
 

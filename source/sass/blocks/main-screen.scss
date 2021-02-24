@@ -1,5 +1,5 @@
 .main-screen {
-  background: url("../img/back-main-desktop.jpeg") no-repeat top center;
+  background: url("../img/back-main-desktop.jpg") no-repeat top center;
   background-size: cover;
   background-color: $dark;
   overflow: hidden;
@@ -9,7 +9,7 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/back-main-desktop@2x.jpeg") no-repeat top center;
+    background: url("../img/back-main-desktop@2x.jpg") no-repeat top center;
     background-size: cover;
     background-color: $dark;
 
@@ -65,7 +65,7 @@
     max-width: 705px;
     width: 54%;
     height: 515px;
-    background: url("../img/board.jpeg") no-repeat center;
+    background: url("../img/board.png") no-repeat center;
     background-size: contain;
 
     @supports(background-image: url("../img/board.webp")) {
@@ -73,7 +73,7 @@
     }
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/board@2x.jpeg") no-repeat top center;
+      background: url("../img/board@2x.png") no-repeat top center;
       background-size: 100%;
 
       @supports(background-image: url("../img/board@2x.webp")) {
@@ -116,7 +116,7 @@
 
 @media (max-width: $tablet) {
   .main-screen {
-    background-image: url("../img/back-main-tablet.jpeg");
+    background-image: url("../img/back-main-tablet.jpg");
     background-position: top 11px center;
     background-size: 100% auto;
     background-color: $dark;
@@ -126,7 +126,7 @@
     }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/back-main-tablet@2x.jpeg");
+      background-image: url("../img/back-main-tablet@2x.jpg");
       background-size: 100% auto;
       background-position: top 11px center;
       background-color: $dark;
@@ -178,7 +178,7 @@
 
 @media (max-width: $mobile) {
   .main-screen {
-    background-image: url("../img/back-main-mobile.jpeg");
+    background-image: url("../img/back-main-mobile.jpg");
     background-position: top center;
     background-size: 100% auto;
     background-color: $dark;
@@ -188,7 +188,7 @@
     }
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/back-main-mobile@2x.jpeg") no-repeat top center;
+      background: url("../img/back-main-mobile@2x.jpg") no-repeat top center;
       background-size: 100% auto;
       background-color: $dark;
 
