@@ -12,7 +12,6 @@
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
-  <script> !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document); </script>
 </head>
 
 <body>
@@ -330,123 +329,125 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__content">
-        <div class="page-footer__socials social">
-          <a class="social__logo">
-            <svg width="216" height="52">
-              <use xlink:href="./img/sprite.svg#footer-logo"></use>
-            </svg>
-          </a>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="27" height="27">
-                  <use xlink:href="./img/sprite.svg#fb"></use>
-                </svg>
-                <span class="visually-hidden">Мы в Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="27" height="27">
-                  <use xlink:href="./img/sprite.svg#ok"></use>
-                </svg>
-                <span class="visually-hidden">Мы в Одноклассниках</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg width="27" height="27">
-                  <use xlink:href="./img/sprite.svg#vk"></use>
-                </svg>
-                <span class="visually-hidden">Мы во ВКонтакте</span>
-              </a>
-            </li>
-          </ul>
-          <div class="social__copyright">
-            <span class="social__rights">Все права защищены</span>
-            <span class="social__company">1999-2018 SD Service Devices</span>
+        <div class="page-footer__wrapper">
+          <div class="page-footer__socials social">
+            <a class="social__logo">
+              <svg width="216" height="52">
+                <use xlink:href="./img/sprite.svg#footer-logo"></use>
+              </svg>
+            </a>
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="27" height="27">
+                    <use xlink:href="./img/sprite.svg#fb"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="27" height="27">
+                    <use xlink:href="./img/sprite.svg#ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Одноклассниках</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg width="27" height="27">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы во ВКонтакте</span>
+                </a>
+              </li>
+            </ul>
+            <div class="social__copyright">
+              <span class="social__rights">Все права защищены</span>
+              <span class="social__company">1999-2018 SD Service Devices</span>
+            </div>
           </div>
-        </div>
-        <div class="page-footer__site-sections site-sections site-sections--nojs">
-          <div class="site-sections__wrapper">
-            <h3 class="site-sections__title page-footer__title">
-              Разделы сайта
-            </h3>
-            <button type="button" class="site-sections__toggle">
-              <span class="visually-hidden">Открыть или закрыть меню</span>
-            </button>
-          </div>
-          <ul class="site-sections__list">
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                О компании
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Продукты
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Производство печатных плат
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Монтаж печатных плат
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Комплектующие
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Доставка
-              </a>
-            </li>
-            <li class="site-sections__item">
-              <a href="#" class="site-sections__link page-footer__link">
-                Контакты
-              </a>
-            </li>
-          </ul>
+          <div class="page-footer__site-sections site-sections site-sections--nojs">
+            <div class="site-sections__wrapper">
+              <h3 class="site-sections__title page-footer__title">
+                Разделы сайта
+              </h3>
+              <button type="button" class="site-sections__toggle">
+                <span class="visually-hidden">Открыть или закрыть меню</span>
+              </button>
+            </div>
+            <ul class="site-sections__list">
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  О компании
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Продукты
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Производство печатных плат
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Монтаж печатных плат
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Комплектующие
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Доставка
+                </a>
+              </li>
+              <li class="site-sections__item">
+                <a href="#" class="site-sections__link page-footer__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
 
-        </div>
-        <div class="page-footer__offices offices offices--nojs">
-          <div class="offices__wrapper">
-            <h3 class="offices__title page-footer__title">
-              Наш офис
-            </h3>
-            <button type="button" class="offices__toggle">
-              <span class="visually-hidden">Открыть или закрыть меню</span>
-            </button>
           </div>
+          <div class="page-footer__offices offices offices--nojs">
+            <div class="offices__wrapper">
+              <h3 class="offices__title page-footer__title">
+                Наш офис
+              </h3>
+              <button type="button" class="offices__toggle">
+                <span class="visually-hidden">Открыть или закрыть меню</span>
+              </button>
+            </div>
 
-          <ul class="offices__list">
-            <li class="offices__item">
-              <span class="page-footer__link">
-                г. Мытищи, Олимпийский проспект, д.10
-              </span>
-            </li>
-            <li class="offices__item">
-              <a href="tel:+74955894050" class="offices__link page-footer__link">
-                +7 (495) 589-40-50
-              </a>
-            </li>
-            <li class="offices__item">
-              <a href="tel:+79250038767" class="offices__link page-footer__link">
-                +7 (925) 003-87-67
-              </a>
-            </li>
-            <li class="offices__item">
-              <a href="tel:+792692608079" class="offices__link page-footer__link">
-                +7 (926) 926-080-79
-              </a>
-            </li>
-          </ul>
+            <ul class="offices__list">
+              <li class="offices__item">
+                <span class="page-footer__link">
+                  г. Мытищи, Олимпийский проспект, д.10
+                </span>
+              </li>
+              <li class="offices__item">
+                <a href="tel:+74955894050" class="offices__link page-footer__link">
+                  +7 (495) 589-40-50
+                </a>
+              </li>
+              <li class="offices__item">
+                <a href="tel:+79250038767" class="offices__link page-footer__link">
+                  +7 (925) 003-87-67
+                </a>
+              </li>
+              <li class="offices__item">
+                <a href="tel:+792692608079" class="offices__link page-footer__link">
+                  +7 (926) 926-080-79
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="page-footer__info info">
           <a href="#" class="page-footer__confidentiality">

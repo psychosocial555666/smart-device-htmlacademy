@@ -30,6 +30,11 @@
   }
 }
 
+.page-footer__wrapper {
+  display: flex;
+  width: 100%;
+}
+
 .page-footer__confidentiality {
   font-size: 13px;
   line-height: 24px;
@@ -78,6 +83,10 @@
     &::before {
       bottom: 74px;
     }
+  }
+
+  .page-footer__wrapper {
+    flex-wrap: wrap;
   }
 
   .page-footer__content {
